@@ -1,0 +1,84 @@
+/* Wallet.css - matches your dark theme, no address section */
+
+.wallet-page {
+  min-height: 100vh;
+  background: #0f0f17;
+  color: #e0e0ff;
+  padding: 24px;
+  min-width: 1405px;
+}
+
+.wallet-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #a78bfa;
+  font-size: 28px;
+  cursor: pointer;
+  margin-right: 16px;
+}
+
+.wallet-card {
+  background: #141422;
+  border-radius: 16px;
+  border: 1px solid #2a2a3a;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.total-balance h3,
+.token-list-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #a0a0c0;
+}
+
+.balance-amount {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.token-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.token-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: #1e1e2e;
+  border-radius: 12px;
+  border: 1px solid #2a2a3a;
+}
+
+.token-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.token-symbol {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.token-amount {
+  font-size: 1rem;
+  color: #a0a0c0;
+}
+
+.token-value {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
+}

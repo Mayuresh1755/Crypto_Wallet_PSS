@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f0f17; /* dark theme background */
+  color: #e0e0ff;
+  min-height: 100vh;
+}
+
+.layout {
+  display: flex;
+  height: 150vh;
+}
+
+/* Sidebar */
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #141422;
+  padding: 20px 0;
+  border-right: 1px solid #2a2a3a;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Logo – bigger text */
+.logo {
+  padding: 24px 28px 40px;
+  font-size: 2rem;                   /* already big – kept as is */
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.logo:hover {
+  color: #7c3aed;
+}
+
+/* Sidebar logo variant – bigger text */
+.sidebar .logo {
+  padding: 20px 28px;
+  font-size: 1.6rem;                 /* ← increased from 1.4rem to 1.6rem */
+  font-weight: bold;
+  color: #a78bfa;
+  display: flex;
+  justify-content: center;           /* centered text */
+  align-items: center;
+  gap: 0;                            /* no gap since icon is removed */
+}
+
+/* Menu items – bigger text & more spacing */
+.menu-item {
+  padding: 18px 28px;                /* ← increased vertical padding (more space between rows) */
+  display: flex;
+  align-items: center;
+  gap: 16px;                         /* ← increased gap between icon & text */
+  color: #a0a0c0;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1.2rem;                 /* ← increased from 1.1rem to 1.2rem */
+  font-weight: 600;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  background: #2a2a3a;
+  color: white;
+}
+
+.menu-item i {
+  font-size: 1.5rem;                 /* slightly bigger icons to match text */
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  padding-bottom: 28px;
+}
+/* Main content */
+.main {
+  margin-left: 240px;
+  padding: 24px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Top bar (if needed) */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #141422;
+  border-bottom: 1px solid #2a2a3a;
+}
+
+/* Portfolio Card */
+.portfolio-card {
+  background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);
+  border-radius: 16px;
+  padding: 32px 40px;
+  margin: 0 auto 40px auto;     /* ← centers horizontally */
+  max-width: 1500px;             /* ← tune this value */
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  text-align: left;           /* centers text inside the card */
+}
+
+.portfolio-title {
+  font-size: 1.1rem;
+  opacity: 1;
+  margin-bottom: 8px;
+}
+
+.portfolio-value {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 12px 0;
+}
+
+.change {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  flex: 1;
+  min-width: 340px;
+  background: #1e1e2e;
+  border: 1px solid #3a3a4f;
+  border-radius: 12px;
+  padding: 16px 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background: #2a2a3e;
+  transform: translateY(-2px);
+}
+
+.action-btn i {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: #a78bfa;
+}
+
+.action-btn span {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* Tokens */
+.tokens-title {
+  font-size: 1.5rem;
+  margin: 0 0 20px 0;
+  align-items: left;
+}
+
+.token-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.token-item {
+  background: #1e1e2e;
+  border: 1px solid #2f2f45;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.token-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-right: 16px;
+}
+
+.token-info {
+  flex: 1;
+}
+
+.token-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.token-symbol {
+  color: #a0a0c0;
+  font-size: 0.9rem;
+}
+
+.token-value-block {
+  text-align: right;
+}
+
+.token-value {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.token-change {
+  font-size: 0.95rem;
+  background: none;           /* ← explicitly remove any background */
+  padding: 0;                 /* ← remove any padding that creates rectangle */
+  border-radius: 0;
+  display: inline;            /* or inline-block if needed */
+}
+
+.token-change.positive {
+  color: #22c55e;
+}
+
+.token-change.negative {
+  color: #c52222;
+}
+
+.token-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  max-height: 300px;           /* ← key line: limits height → triggers scroll */
+  overflow-y: auto;            /* ← scrollbar when needed */
+  padding-right: 8px;          /* optional: prevents content overlap */
+
+  /* Optional nice scrollbar look */
+  scrollbar-width: thin;       /* Firefox */
+  scrollbar-color: var(--accent) var(--sidebar-bg);
+}
+
+/* Webkit browsers (Chrome, Edge, Safari) */
+.token-list::-webkit-scrollbar {
+  width: 8px;
+}
+.token-list::-webkit-scrollbar-track {
+  background: var(--sidebar-bg);
+}
+.token-list::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+.token-list::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-dark);
+}

@@ -1,0 +1,177 @@
+/* Networks.css - MetaMask-style dark theme */
+
+.networks-page {
+  min-height: 100vh;
+  background: #0f0f17;
+  color: #e0e0ff;
+  padding: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-width: 1410px;
+}
+
+.networks-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #a78bfa;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  flex: 1;
+  text-align: center;
+}
+
+.search-container {
+  margin-bottom: 24px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  background: #1e1e2e;
+  border: 1px solid #2a2a3a;
+  border-radius: 12px;
+  color: #e0e0ff;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #6b7280;
+}
+
+.section-title {
+  color: #a0a0c0;
+  font-size: 14px;
+  margin-bottom: 12px;
+  padding: 0 8px;
+}
+
+.networks-list {
+  background: #141422;
+  border-radius: 16px;
+  border: 1px solid #2a2a3a;
+  overflow: hidden;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.network-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #2a2a3a;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.network-item:hover {
+  background: #1e1e2e;
+}
+
+.network-item.active {
+  background: #2a2a3a;
+}
+
+.network-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.network-icon {
+  font-size: 24px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(124, 58, 237, 0.1);
+}
+
+.network-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.network-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.current-badge {
+  background: #22c55e;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: #a0a0c0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.add-custom-btn {
+  width: 100%;
+  margin-top: 24px;
+  padding: 16px;
+  background: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-custom-btn:hover {
+  background: #6d28d9;
+  transform: translateY(-2px);
+}
+
+/* Scrollbar styling */
+.networks-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.networks-list::-webkit-scrollbar-track {
+  background: #141422;
+}
+
+.networks-list::-webkit-scrollbar-thumb {
+  background: #a78bfa;
+  border-radius: 3px;
+}
+.network-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.network-price {
+  font-size: 0.85em;
+  color: #888;
+  margin-top: 2px;
+}
+
+.positive { color: #00cc00; }
+.negative { color: #ff4444; }
